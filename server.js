@@ -57,10 +57,14 @@ app.put('/users', authUser, editUser);
  * ##########################
  */
 
-const { newVideogame } = require('./controllers/videogames');
+const { newVideogame, selectAllVideogames } = require('./controllers/videogames');
+
 
 // Registro de un nuevo videojuego.
 app.post('/videogames', authUser, newVideogame);
+
+// Listar todos los videojuegos
+app.get('/videogames', authUserOptional, selectAllVideogames);
 
 /**
  * ######################

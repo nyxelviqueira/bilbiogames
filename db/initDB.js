@@ -38,7 +38,7 @@ async function main() {
                 title VARCHAR(50) NOT NULL,
                 description VARCHAR(500) NOT NULL,
                 image VARCHAR(100) NOT NULL,
-                platform VARCHAR(20) NOT NULL,
+                platform VARCHAR(150) NOT NULL,
                 company VARCHAR(20) NOT NULL,
                 releaseDate TIMESTAMP NOT NULL
             )

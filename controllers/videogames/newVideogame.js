@@ -15,31 +15,19 @@ const newVideogame = async (req, res, next) => {
         }
         const { title, description, platform, company, releaseDate } = req.body;
 
-        if (!title || !description || !platform || !company || !releaseDate) {
+        if (!title || !description || !platform || !company || !releaseDate || image) {
             throw generateError('Faltan campos', 400);
         }
 
-        console.log(`Prueba ${req.user.id}`);
-        console.log(`Prueba ${title}`);
-        console.log(`Prueba ${description}`);
-        console.log(`Prueba ${image}`);
-        console.log(`Prueba ${platform}`);
-        console.log(`Prueba ${company}`);
-        console.log(`Prueba ${releaseDate}`);
-
-        const videogame = await insertVideogameQuery([
+        const videogame = await insertVideogameQuery(
             req.user.id,
             title,
             description,
             image,
             platform,
             company,
-            releaseDate,
-        ]);
-
-        
-
-        console.log(`Prueba final ${videogame}`);
+            releaseDate
+        );
 
         res.send({
             status: 'ok',

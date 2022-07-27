@@ -22,7 +22,7 @@ const insertVideogameQuery = async (
     INSERT INTO videogames (idUser, title, description, image, 
         platform, company, releaseDate)
     VALUES (?, ?, ?, ?, ?, ?, ?)
-    `[(idUser, title, description, image, platform, company, releaseDate)]
+    `,[idUser, title, description, image, platform, company, releaseDate]
         );
 
         console.log(`Prueba ${newVideogame}`);

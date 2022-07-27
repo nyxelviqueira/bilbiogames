@@ -53,11 +53,11 @@ Vamos a crear una biblioteca de videojuegos con diferentes opciones
 -   POST [/users] - Registro de usuario. ✅
 -   POST [/users/login] - Login de usuario (devuelve token). ✅
 -   GET [/users] - Devuelve información del usuario del token. **TOKEN** ✅
--   PUT [/users] - Editar el nombre de usuario, el email o el avatar. **TOKEN** ✅
+-   PUT [/users] - Editar el nombre de usuario, el email o el avatar. ✅ **TOKEN** ✅
 
 ### Videogames:
 
--   POST [/videogames] - Registra un videojuego. **TOKEN**
+-   POST [/videogames] - Registra un videojuego. **TOKEN** ✅
 -   GET [/videogames] - Lista todos los videojuegos.
 -   GET [/videogames/:idVideogame] - Devuelve información de un videojuego concreto.
 -   POST [/videogames/:idVideogame] - Añade un comentario al videojuego. **TOKEN**
